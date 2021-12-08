@@ -42,3 +42,7 @@ with open('match.html', 'r') as html_file:
             print(f'Bet odds: {match_odd_value}')
             print(f'Bookmaker: {match_odd_bookmaker}')
             print('------------------------------------')
+
+        print('----------------Bottom Section--------------------')
+        match_expected_profit = match.find('div', class_ = 'sure-bet-cta').span.contents[0].text
+        print(f'Expected profit: {match_expected_profit}')
